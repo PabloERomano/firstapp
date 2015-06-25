@@ -9,7 +9,10 @@
     <c:forEach items="${model.products}" var="prod">
       <c:out value="${prod.description}"/> <i>$<c:out value="${prod.price}"/></i><br><br>
     </c:forEach>
+    <br>
+    <a href="<c:url value="priceincrease.htm"/>">Increase Prices</a>
+    <br>
    </body>
    <br><br><br><br>
-  <footer><p align="right"><i><c:out value="${model.footer}"/></i></p></footer>
+  <footer><p align="right"><i><c:out value="${model.footer}"/><fmt:message key="developer"/></i></p></footer>
 </html>

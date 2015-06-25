@@ -1,8 +1,8 @@
 package com.firstapp.web;
 
-import static org.junit.Assert.*;
-
 import java.util.Map;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 import org.springframework.web.servlet.ModelAndView;

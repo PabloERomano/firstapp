@@ -6,7 +6,7 @@
   <title><fmt:message key="title"/></title>
   <style>
     .error { color: red; }
-  </style>
+  </style>  
 </head>
 <body>
 <h1><fmt:message key="priceincrease.heading"/></h1>
