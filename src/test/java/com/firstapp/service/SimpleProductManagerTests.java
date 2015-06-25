@@ -1,7 +1,5 @@
 package com.firstapp.service;
 
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.firstapp.domain.Product;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class SimpleProductManagerTests {
 
@@ -27,7 +24,7 @@ public class SimpleProductManagerTests {
     private static String TABLE_DESCRIPTION = "Table";
     private static Double TABLE_PRICE = new Double(150.10);
 
-    private static int POSITIVE_PRICE_INCRESE = 10;
+    private static int POSITIVE_PRICE_INCREASE = 10;
 
     @Before
     public void setUp() throws Exception {
@@ -71,31 +68,29 @@ public class SimpleProductManagerTests {
     }
 
     @Test
-    public void testIncresePriceWithNullListOfProducts(){
+    public void testIncreasePriceWithNullListOfProducts() {
         try {
             productManager = new SimpleProductManager();
-            productManager.increasePrice(POSITIVE_PRICE_INCRESE);
-        }
-        catch (NullPointerException ex) {
-            fail("Product list is null.");
+            productManager.increasePrice(POSITIVE_PRICE_INCREASE);
+        } catch (NullPointerException ex) {
+            fail("Products list is null.");
         }
     }
 
     @Test
-    public void testIncresePriceWithEmptyListOfProducts(){
+    public void testIncreasePriceWithEmptyListOfProducts() {
         try {
             productManager = new SimpleProductManager();
             productManager.setProducts(new ArrayList<Product>());
-            productManager.increasePrice(POSITIVE_PRICE_INCRESE);
-        }
-        catch(Exception ex) {
+            productManager.increasePrice(POSITIVE_PRICE_INCREASE);
+        } catch (Exception ex) {
             fail("Products list is empty.");
         }
     }
 
     @Test
     public void testIncreasePriceWithPositivePercentage() {
-        productManager.increasePrice(POSITIVE_PRICE_INCRESE);
+        productManager.increasePrice(POSITIVE_PRICE_INCREASE);
         double expectedChairPriceWithIncrease = 22.55;
         double expectedTablePriceWithIncrease = 165.11;
 
@@ -106,5 +101,4 @@ public class SimpleProductManagerTests {
         product = products.get(1);
         assertEquals(expectedTablePriceWithIncrease, product.getPrice(), 0);
     }
-
 }
