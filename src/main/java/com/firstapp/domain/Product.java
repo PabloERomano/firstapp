@@ -25,7 +25,7 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public String toString(){
+    public String toString() {
         StringBuffer buffer = new StringBuffer();
         buffer.append("Description: " + description + ";");
         buffer.append("Price: " + price);

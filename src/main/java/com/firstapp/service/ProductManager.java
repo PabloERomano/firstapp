@@ -7,7 +7,7 @@ import com.firstapp.domain.Product;
 
 public interface ProductManager extends Serializable{
 
-    public void incresePrice(int percentage);
+    public void increasePrice(int percentage);
 
     public List<Product> getProducts();
 }
